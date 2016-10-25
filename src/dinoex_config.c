@@ -627,6 +627,7 @@ static int config_string_anzahl = 0;
 static config_string_typ config_parse_string[] = {
 {"admin_job_done_file",     &gdata.admin_job_done_file,     1 }, /* NOTRANSLATE */
 {"admin_job_file",          &gdata.admin_job_file,          1 }, /* NOTRANSLATE */
+{"admin_nick",              &gdata.admin_nick,              0 }, /* NOTRANSLATE */
 {"adminpass",               &gdata.adminpass,               4 }, /* NOTRANSLATE */
 {"announce_seperator",      &gdata.announce_seperator,      0 }, /* NOTRANSLATE */
 {"announce_suffix_color",   &gdata.announce_suffix_color,   0 }, /* NOTRANSLATE */
@@ -673,6 +674,7 @@ static config_string_typ config_parse_string[] = {
 #ifndef WITHOUT_BLOWFISH
 {"privmsg_fish",            &gdata.privmsg_fish,            0 }, /* NOTRANSLATE */
 #endif /* WITHOUT_BLOWFISH */
+{"quit_msg",                &gdata.quit_msg,                0 }, /* NOTRANSLATE */
 {"respondtochannellistmsg", &gdata.respondtochannellistmsg, 0 }, /* NOTRANSLATE */
 {"restrictprivlistmsg",     &gdata.restrictprivlistmsg,     0 }, /* NOTRANSLATE */
 #ifdef USE_RUBY

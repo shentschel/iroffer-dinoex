@@ -340,6 +340,11 @@ void l_perform(int changesec)
       l_istimeout(ul);
 
       if (ul->ul_status == UPLOAD_STATUS_DONE) {
+        ioutput(OUT_S, COLOR_NO_COLOR, "Finished upload for file: %s", ul->file);
+
+        if(gdata.admin_nick)
+          notice(gdata.admin_nick, "Finished upload for file: %s", ul->file);
+
         unsigned int net = ul->net;
         char *nick = ul->nick;
         ul->nick = NULL;
@@ -348,7 +353,7 @@ void l_perform(int changesec)
         mydelete(ul->file);
         mydelete(ul->con.remoteaddr);
         ul = irlist_delete(&gdata.uploads, ul);
-	close_qupload(net, nick);
+	    close_qupload(net, nick);
         mydelete(nick);
         continue;
       }

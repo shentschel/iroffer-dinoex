@@ -128,6 +128,8 @@ char *http_access_log;
 char *autoadd_color;
 char *http_forbidden;
 char *announce_suffix_color;
+char *quit_msg;
+char *admin_nick;
 float transferminspeed, transfermaxspeed;
 unsigned char overallmaxspeeddaydays;
 unsigned char cdummy;
